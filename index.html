@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<meta charset='UTF-8'>
+<!--Text Adventure : Search for the Dragon -->
+<!--*****************************************
+    Text Adventure - A JS/JQuery/HTML5 Tutorial by comments
+
+    The game  : Standard Text Aventure where you can move from room to room, collecting items and killing monsters
+                Goal is to get to the final room of the dungeon and kill the dragon
+                Start in room 1
+                Monsters dont move
+                Monsters can be killed by certain weapons
+                Should work in both mobile and non-mobile browsers
+
+    History :   0.1 Initial version before Hilary's comments/advice
+    ***************************************** -->
+<html>
+<head>
+    <title>Search For The Dragon | Javscript Text Adventure Demo</title>
+    <!--<link rel='stylesheet' href='https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css'>-->
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='./main.css'>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+    <script src='text-adventure.js'></script>
+</head>
+<body class='container'>
+    <section id='header' class='container-fluid row alert-success'>
+        <h1>Search For The Dragon</h1>
+        <h2>Javascript Text Adventure Demo</h2>
+    </section>
+    <section id='hud' class='container-fluid row'>
+        <div id='status' class='col-sm-9'></div>
+        <div id='items' class='col-sm-3 container'>
+            <div class='row'>
+                <div class='col-lg-2 item square'></div>
+                <div class='col-lg-2 item square'></div>
+                <div class='col-lg-2 item square'></div>
+                <div class='col-lg-2 item square'></div>
+                <div class='col-lg-2 item square'></div>
+                <div class='col-lg-2 item square'></div>
+            </div>
+            <div class='row'>
+                <div class='col-lg-2 item square'></div>
+                <div class='col-lg-2 item square'></div>
+                <div class='col-lg-2 item square'></div>
+                <div class='col-lg-2 item square'></div>
+                <div class='col-lg-2 item square'></div>
+                <div class='col-lg-2 item square'></div>
+            </div>
+            <div class='row'>
+                <div class='col-lg-2 item square'></div>
+                <div class='col-lg-2 item square'></div>
+                <div class='col-lg-2 item square'></div>
+                <div class='col-lg-2 item square'></div>
+                <div class='col-lg-2 item square'></div>
+                <div class='col-lg-2 item square'></div>
+            </div>
+        </div>
+    </section>
+    <section id= 'GameDiv' class='container-fluid row alert-info'>
+        <div id='output' class='col-sm-12'></div>
+    </section>
+    <section id='input' class='container-fluid row alert-danger'>
+        <form class='container row'>
+<!--
+            <div id='GameOverDiv' class='col-sm-12'></div>
+            <div id='GameDiv' class='col-sm-12'>
+-->
+                <!--The following div is hidden or shown depending on if its a non-mobile browser-->
+                <div id='Keyboard' class='row container col-sm-12'>
+                    <label>Command:</label>
+                    <input type='text' name='userInput' class='buttonMod' id='userInput' />
+                </div>
+                <!--The following div is hidden or shown depending on if its a mobile browser-->
+                <div id='controllers' class='container'>
+                    <!--We use a Bootstrap table for the simple alignment of the direction and action command buttons-->
+                    <div class='container row'>
+                        <input type='button' class='button col-sm-1 square' value='NORTH' title='North' />
+                    </div>
+                    <div class='container row'>
+                        <input type='button' class='button col-sm-1 square' value='WEST' title='West' />
+                        <input type='button' class='button col-sm-1 square' value='EAST' title='East' />
+                    </div>
+                    <div class='container row'>
+                        <input type='button' class='button col-sm-1 square' value='SOUTH' title='South' />
+                    </div>
+                    <!--Action comand buttons-->
+                    <div class='container row'>
+                        <input type='button' class='button col-sm-1 square' value='PICKUP' title='Pickup' />
+                        <input type='button' class='button col-sm-1 square' value='ABOUT' title='About' />
+                        <input type='button' class='button col-sm-1 square' value='HELP' title='Help' />
+                    </div>
+                    <!-- controllers-->
+                </div>
+                <!-- GameDiv-->
+            </div>
+        </form>
+                <!--input-->
+            </div>
+            <!--display-->
+        </div>
+     </section>
+</body>
+</html>

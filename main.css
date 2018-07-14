@@ -1,0 +1,32 @@
+body {
+    background-color: black;
+    display: inline-block;
+}
+
+#header, #room, #status, #output, #keyboard {
+    color: white;
+}
+
+.square {
+    border-color: white;
+    border-width: 1px;
+    border-style: solid;
+}
+#keyboard, #controllers, .btn {
+    margin-bottom:10px;
+}
+
+.square {
+    /*background: black;*/
+    width: calc(100%/6);
+    /*padding-bottom: calc(100%/6);  = width for a square aspect ratio */
+    display: inline-block
+}
+
+.yesItem {
+
+}
+
+.noItem {
+
+}
